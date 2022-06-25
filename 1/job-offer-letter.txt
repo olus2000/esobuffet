@@ -1,0 +1,18 @@
+
+Hello there,
+
+I am pleased to offer you the postion of Junior UwUmanic Engineer at UwUmanics Technologies. You will be starting on June 26th 2022 as per our agreement.
+
+You have been assigned to work on one of our cutting edge uwuputers (uwumanic computer) that is still in active research and development. In case you are not familiar with those, they're a brand new type of computer that, unlike a quantum computer, can store an infinite amount of data in a single register! Our uwuputers have a whopping 8 registers to work with, more than those of any of our competitors.
+
+As you haven't listed expertise in uwumanics on your resume and you might need a tl;dr before jumping into the books, here's a quick rundown of everything known in the field: A single register can either store a single integer (unbounded, so that alone can store an infinite amount of information) or a list. A list of what? Nobody knows, as the lists are completely unindexable. As the lists can be compared we think the items inside the lists can also be compared to each other. That would also mean that they can be sorted, but no one has been able to demonstrate that. The only things that have been done are merging two lists into one (the uwu operation) and splitting a list into two (the manic operation). The details of those I will leave it to you to familiarize with.
+
+
+Please confirm your acceptance of this offer by signing and returning a copy of this letter to lyricly@uwumanics-tech.com
+
+We look forward to welcoming you on board.
+
+Sincerely,
+Alex Stefanov
+CEO
+UwUmanics Technologies

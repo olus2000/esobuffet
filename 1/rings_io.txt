@@ -1,0 +1,1 @@
+The interpreter uses standard IO for both input and output. The qualification program takes 8 bit unsigned integers (15 at most, one per byte) terminated by 0xFF and outputs them in ascending order, terminated by 0xFF.
