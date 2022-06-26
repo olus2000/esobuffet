@@ -3226,7 +3226,7 @@ The magic &quot;encryption&quot; algorithm steps follow:
 - Create an array called C with 256 zeroes.
 - Create an array called A with TL zeroes.
 - For each element E of the T array, increment the E-th cell of C.
-- Given I=0, for each number N in range `&lt;0, 256)`, set the N-th element of C to I and set I to the previous value of the N-th element of C.
+- Given I=0, for each number N in range `&lt;0, 256)`, set the N-th element of C to I and increment I by the previous value of the N-th element of C.
 - For each I in `&lt;0, magic number)`, take the I-th element of T and call it X. Use X to index into C and then A. Set the value in the A array to I. Increment X-th element of C. 
 - For each I in `&lt;magic number, TL)`, take the I-th element of T and call it X. Use X to index into C and then A. Set the value in the A array to I + 1. Increment X-th element of C. 
 - For each I in range `&lt;0, TL)`:
