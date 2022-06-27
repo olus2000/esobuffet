@@ -1,1 +1,0 @@
-The integers are passed as arguments to the interpreter, placing them on the A stack. The integers are printed using the `.` operator in sorted order.
