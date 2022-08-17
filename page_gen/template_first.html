@@ -8,12 +8,9 @@
   <meta content="https://eb.esolangs.gay/favicon.png" property="og:image">
   <meta content="Esolangs" property="og:site_name">
   <link rel="stylesheet" href="../main.css">
-  <meta content="Esolang Buffet #{{ round }}" property="og:title">
-  <meta content="{{ description }}" property="og:description">
-  <meta content="https://eb.esolangs.gay/{{ round }}/" property="og:url">
-  <!--
-  <style>pre{line-height:125%}td.linenos .normal{color:inherit;background-color:transparent;padding-left:5px;padding-right:5px}span.linenos{color:inherit;background-color:transparent;padding-left:5px;padding-right:5px}td.linenos .special{color:#000000;background-color:#ffffc0;padding-left:5px;padding-right:5px}span.linenos.special{color:#000000;background-color:#ffffc0;padding-left:5px;padding-right:5px}.code .hll{background-color:#49483e}.code{background:#272822;color:#f8f8f2}.code .c{color:#75715e}.code .err{color:#960050;background-color:#1e0010}.code .esc{color:#f8f8f2}.code .g{color:#f8f8f2}.code .k{color:#66d9ef}.code .l{color:#ae81ff}.code .n{color:#f8f8f2}.code .o{color:#f92672}.code .x{color:#f8f8f2}.code .p{color:#f8f8f2}.code .ch{color:#75715e}.code .cm{color:#75715e}.code .cp{color:#75715e}.code .cpf{color:#75715e}.code .c1{color:#75715e}.code .cs{color:#75715e}.code .gd{color:#f92672}.code .ge{color:#f8f8f2;font-style:italic}.code .gr{color:#f8f8f2}.code .gh{color:#f8f8f2}.code .gi{color:#a6e22e}.code .go{color:#66d9ef}.code .gp{color:#f92672;font-weight:bold}.code .gs{color:#f8f8f2;font-weight:bold}.code .gu{color:#75715e}.code .gt{color:#f8f8f2}.code .kc{color:#66d9ef}.code .kd{color:#66d9ef}.code .kn{color:#f92672}.code .kp{color:#66d9ef}.code .kr{color:#66d9ef}.code .kt{color:#66d9ef}.code .ld{color:#e6db74}.code .m{color:#ae81ff}.code .s{color:#e6db74}.code .na{color:#a6e22e}.code .nb{color:#f8f8f2}.code .nc{color:#a6e22e}.code .no{color:#66d9ef}.code .nd{color:#a6e22e}.code .ni{color:#f8f8f2}.code .ne{color:#a6e22e}.code .nf{color:#a6e22e}.code .nl{color:#f8f8f2}.code .nn{color:#f8f8f2}.code .nx{color:#a6e22e}.code .py{color:#f8f8f2}.code .nt{color:#f92672}.code .nv{color:#f8f8f2}.code .ow{color:#f92672}.code .w{color:#f8f8f2}.code .mb{color:#ae81ff}.code .mf{color:#ae81ff}.code .mh{color:#ae81ff}.code .mi{color:#ae81ff}.code .mo{color:#ae81ff}.code .sa{color:#e6db74}.code .sb{color:#e6db74}.code .sc{color:#e6db74}.code .dl{color:#e6db74}.code .sd{color:#e6db74}.code .s2{color:#e6db74}.code .se{color:#ae81ff}.code .sh{color:#e6db74}.code .si{color:#e6db74}.code .sx{color:#e6db74}.code .sr{color:#e6db74}.code .s1{color:#e6db74}.code .ss{color:#e6db74}.code .bp{color:#f8f8f2}.code .fm{color:#a6e22e}.code .vc{color:#f8f8f2}.code .vg{color:#f8f8f2}.code .vi{color:#f8f8f2}.code .vm{color:#f8f8f2}.code .il{color:#ae81ff}.code{tab-size:4}</style>
-  -->
+  <meta content="Esolang Buffet #{{ round.id }}" property="og:title">
+  <meta content="{{ config['page description'] }}" property="og:description">
+  <meta content="https://eb.esolangs.gay/{{ round.id }}/" property="og:url">
   <script src="../main.js" defer></script>
   <!-- highlight -->
   <link rel="stylesheet"
@@ -21,84 +18,81 @@
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   <style>
-pre, pre *
-{
-  font:normal normal normal 1em/1.4 monaco, courier, monospace;
-}
-pre
-{
-  font-size:0.8em;
-}
-pre.line-numbers
-{
-  position:relative;
-}
-pre.line-numbers code, 
-pre.line-numbers samp
-{
-  margin-left:3em;
-}
-pre div
-{
-  display:none;
-}
-pre.line-numbers > div
-{
-  display:block;
-  
-  position:absolute;
-  top:0;
-  left:0;
-}
-pre.line-numbers > div > span
-{
-  display:block;
-  width:2.5em;
-  padding:0 0.5em 0 0;
-  
-  text-align:right;
-}
-pre.line-numbers > div
-{
-  counter-reset:line;
-  padding: 1em 0 0 0;
-}
-pre.line-numbers > div > span
-{
-  counter-increment:line;
-}
-pre.line-numbers > div > span::before
-{
-  content:counter(line);
-}
-</style>
+    pre, pre *
+    {
+      font:normal normal normal 1em/1.4 monaco, courier, monospace;
+    }
+    pre
+    {
+      font-size:0.8em;
+    }
+    pre.line-numbers
+    {
+      position:relative;
+    }
+    pre.line-numbers code, 
+    pre.line-numbers samp
+    {
+      margin-left:3em;
+    }
+    pre div
+    {
+      display:none;
+    }
+    pre.line-numbers > div
+    {
+      display:block;
+      
+      position:absolute;
+      top:0;
+      left:0;
+    }
+    pre.line-numbers > div > span
+    {
+      display:block;
+      width:2.5em;
+      padding:0 0.5em 0 0;
+      
+      text-align:right;
+    }
+    pre.line-numbers > div
+    {
+      counter-reset:line;
+      padding: 1em 0 0 0;
+    }
+    pre.line-numbers > div > span
+    {
+      counter-increment:line;
+    }
+    pre.line-numbers > div > span::before
+    {
+      content:counter(line);
+    }
+  </style>
 </head>
 <body>
-  <h1>Esolang Buffet, round #{{ round }}</h1>
+  <h1>Esolang Buffet, round #{{ round.id }}</h1>
   <p>
     Started at
-    <strong><span class="datetime">{{ start_date }}</span></strong>;
-    {% if first_deadline > now %}
-      stage 1 deadline:
-      <strong><span class="datetime">{{ first_deadline }}</span></strong>.
-    {% else %}
-      stage 2 since
-      <strong><span class="datetime">{{ first_deadline }}</span></strong>.
-      {% if second_deadline > now %}
-        Stage 2 deadline:
-      {% else %}
-        Ended at
-      {% endif %}
-      <strong><span class="datetime">{{ second_deadline }}</span></strong>.
-    {% endif %}
+    <strong><span class="datetime">
+      {{ round.start.isoformat() }}+00:00
+    </span></strong>.
+    {% block dates %}
+      Stage 1 deadline:
+      <strong><span class="datetime">
+        {{ round.first_deadline.isoformat() }}+00:00
+      </span></strong>.
+    {% endblock %}
   </p>
   <h2>Specification</h2>
   <p>
-    The task for the first round is <strong>{{ task_description }}</strong>.
+    The task for the first round is <strong>{{ config['task name'] }}</strong>.
+  </p>
+  <p>
+    {{ config['task description'] }}
   </p>
   <p>
     The test cases are as follows:
   </p>
-  <pre><code>{{ test_cases }}</code></pre>
-  <pre class="line-numbers" id="2137"><div>{% for _ in range(file_length) %}<span></span>{% endfor %}</div><code class="language-{{ file_language }}">{{ file_contents }}</code></pre>
+  <pre><code>{{ config['test cases'] }}</code></pre>
 </body>

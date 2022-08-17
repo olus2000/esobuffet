@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, Date
+from sqlalchemy import create_engine, Column, Integer, String, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
@@ -26,9 +26,9 @@ class Round(Base):
     __tablename__ = 'round'
 
     id = Column(Integer, primary_key=True)
-    start = Column(Date)
-    first_deadline = Column(Date)
-    second_deadline = Column(Date)
+    start = Column(DateTime)
+    first_deadline = Column(DateTime)
+    second_deadline = Column(DateTime)
 
 
 class Player(Base):
